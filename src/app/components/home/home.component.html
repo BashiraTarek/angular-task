@@ -1,0 +1,14 @@
+<!-- 
+ <div id="home" >
+    <div class="card m-5" style="width: 18rem; ">
+  <img [class]="showImg?'visible':'hidden'" src="assets/stars.jpeg" >
+  <div class="card-body">
+    <h5 class="card-title">{{clientName}}</h5>
+    <button class="btn btn-primary mx-2" (click)="  handleToggleImg()">{{showImg?"Hide Img":"Show Img"}}</button>
+  </div>
+</div>
+</div>  -->
+
+<!-- <input class="form-control mt-2" placeholder="Search" [(ngModel)]="searchText"> -->
+<input class="form-control mt-2" placeholder="Search" [(ngModel)]="searchText">
+<app-products [filterValue]="searchText"></app-products>

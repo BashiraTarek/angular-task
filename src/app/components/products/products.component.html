@@ -1,0 +1,23 @@
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" style="cursor: pointer" (click)="HandleDropDown(1)">Category one </a></li>
+    <li><a class="dropdown-item" style="cursor: pointer" (click)="HandleDropDown(2)">Category two </a></li>
+    <li><a class="dropdown-item" style="cursor: pointer" (click)="HandleDropDown(3)">Category three </a></li>
+  </ul>
+  
+</div>
+
+<div class="p-2 products-container">
+  @if(products.length==0){
+    <h3>No Product Matches Your Search Critria </h3>
+  }
+
+  @for(parentproduct of products ;track parentproduct.id){
+ <app-single-product [product]="parentproduct" (handleAddToCart)="addToCart($event)" [searchValue]="filterValue"></app-single-product>
+  }
+
+
+</div>
